@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Card</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+             'Helvetica Neue', sans-serif;
+        }
+        body 
+        {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            margin: 0;
+            background:rgb(99, 204, 236) ;
+
+        }
+        .card
+        {
+            background: white;
+            padding: 2rem;
+            border-radius:16px ;
+            box-shadow: 0 10px 30px rgba(235, 110, 110, 0.08);
+            text-align: center;
+        }
+        button
+        {
+            padding:.7rem 1rem;
+            border: 0;
+            border-radius:12px ;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .primary{
+            background: lightpink;
+            color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <main class="card">
+        <h1 id="message"> Hello,kavi!👏👏</h1>
+        <p>Click to change the message.</p>
+        <button id="btn" class="primary">Change</button>
+    </main>
+    <script>
+        const msgs =["You have got this! 💫✨✨","Praise the Lord! 🙏🙏",
+                        "Keep going 🚀🚀","Smile 🥰🥰","Small steps,big wins!"];
+                        const msgEl=document.getElementById('message');
+                        document.getElementById('btn').addEventListener('click',() =>{
+                          msgEl.textContent = msgs[Math.floor(Math.random()* msgs.length)];
+
+                        });                 
+    </script>
+
+
+</body>
+</html>
